@@ -1,10 +1,9 @@
 import "./styles.css";
-
+import Navbar from "./Component/Navbar";
 export default function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Navbar />
     </div>
   );
 }
