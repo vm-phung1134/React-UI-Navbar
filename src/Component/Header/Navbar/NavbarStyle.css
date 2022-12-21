@@ -2,9 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1b2430;
   padding: 20px 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
 }
 .navbar {
   display: flex;
@@ -61,22 +59,69 @@ nav {
   top: 0.5rem;
   color: #17cf97;
 }
-.signIn{
+.signIn {
   padding: 10px 15px;
-  background-image: linear-gradient(to right, #0077b3, #003366);
+  background-image: linear-gradient(to right, #00b3b3, #00004d);
   color: white;
   border: none;
   border-radius: 3px;
 }
-.signIn:hover{
-  background-image: linear-gradient(to right, #E040FB, #00BCD4);
+.signIn:hover {
+  background-image: linear-gradient(to right, #e040fb, #00bcd4);
   cursor: pointer;
 }
-.settings i{
-  
+.dropdown-icon {
+  display: flex;
+  cursor: pointer;
+}
+.dropdown-icon:hover {
+  color: #17cf97;
+  display: flex;
+}
+.dropdown-icon i {
+  margin-right: 5px;
+}
+.dropdown-content {
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content.active {
+  display: none;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background: #003333;
+  opacity: 0.8;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.toggle-btn {
+  margin-left: 1rem;
+  padding: 3px 6px;
+  background: green;
+  border: none;
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
 }
 /*---------------Responsive Moblie------------------*/
 @media screen and (max-width: 720px) {
+  nav img {
+    width: 100px;
+  }
   .navbar {
     display: flex;
     flex-direction: column;
@@ -99,8 +144,8 @@ nav {
   .burget {
     display: block;
   }
-  .settings i{
-    
+  .dropdown p {
+    display: none;
   }
   .navbar li {
     margin-bottom: 25px;
