@@ -3,6 +3,12 @@ import { useState } from "react";
 function Navbar() {
   const [state, setState] = useState("fas fa-bars");
   const [stateNav, setStateNav] = useState("navbar");
+  const menus = [
+    { name: "Home", link: "index.html" },
+    { name: "Product", link: "index.html" },
+    { name: "About", link: "about.html" },
+    { name: "Service", link: "service.html" },
+  ];
   return (
     <>
       <nav>
@@ -93,21 +99,24 @@ function Navbar() {
         </a>
         <div>
           <ul className={stateNav}>
+            {menus.map((item, index) => (
+              <li>
+                <a key={index} href={item.link}>
+                  {item.name}
+                </a>
+              </li>
+            ))}
             <li>
-              <a className="active" href="index.html">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="index.html">About</a>
-            </li>
-            <li>
-              <a href="index.html">Product</a>
-            </li>
-            <li>
-              <a href="index.html">Support</a>
+               <button className="signIn">
+                 <i className="fas fa-user"></i> 
+                  {' '}Sign In
+               </button>
             </li>
           </ul>
+        </div>
+        <div className="searchForm">
+          <input className="searchInput" placeholder="Search..." />
+          <i className="searchIcon fas fa-search"></i>
         </div>
         <div className="burget">
           <i
@@ -119,6 +128,11 @@ function Navbar() {
               setStateNav(stateNav === "navbar" ? "navbar active" : "navbar");
             }}
           ></i>
+          
+        </div>
+        <div className="settings">
+            <i className="fas fa-gear"></i>
+            <p>{' '}Settings</p>
         </div>
       </nav>
     </>
