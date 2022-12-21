@@ -1,9 +1,9 @@
 import "./styles.css";
-import Navbar from "./Component/Navbar";
+import Header from "./Component/Header/Header"
 export default function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Header/>
     </div>
   );
 }
