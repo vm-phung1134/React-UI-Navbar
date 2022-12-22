@@ -8,7 +8,11 @@ function Header() {
         <div className="intro-poster">
           <img src="https://i.ytimg.com/vi/tQ6OfF3QLEk/maxresdefault.jpg" />
         </div>
-        <div className="intro-content">
+        <div
+          className="intro-content"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <h2>WELLCOME TO, MY WEBSITE FILMS </h2>
           <p>
             Một trang website chuyên lừa đảo và đầy nội dung chờ bạn khám phá.

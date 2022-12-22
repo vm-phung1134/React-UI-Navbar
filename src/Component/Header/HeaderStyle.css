@@ -17,7 +17,13 @@ header {
   width: 600px;
 }
 .intro-content {
-  padding: 100px 15px 15px 15px;
+  padding: 100px;
+  text-align: start;
+  text-justify: center;
+}
+.intro-content p {
+  text-align: justify;
+  margin-top: 10px;
 }
 .btn {
   padding: 15px 20px;
@@ -34,14 +40,14 @@ header {
     margin: 30px 10px 0px;
   }
   .intro-poster img {
-    width: 350px;
+    width: 100%;
   }
   .intro-poster {
     margin-left: 0;
   }
   .intro-content {
     padding: 10px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .btn {
     padding: 7px 10px;
